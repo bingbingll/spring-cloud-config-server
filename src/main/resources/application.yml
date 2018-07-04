@@ -11,7 +11,7 @@ spring:
 #          uri: http://config@192.168.80.21:8566/r/config-rope.git
 #          username: config
 #          password: 123456
-          #码云或GitHub通用写法
+          #码云 或 GitHub(可以不用写登陆名与密码) 通用写法
           uri: https://github.com/bingbingll/config-repo
           #username: username
           #password: password
