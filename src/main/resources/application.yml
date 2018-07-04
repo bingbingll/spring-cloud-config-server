@@ -1,0 +1,39 @@
+server:
+  port: 9004
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          #gitblit写法
+#          uri: http://config@192.168.80.21:8566/r/config-rope.git
+#          username: config
+#          password: 123456
+          #码云或GitHub通用写法
+          uri: https://github.com/bingbingll/config-repo
+          #username: username
+          #password: password
+          default-label: master
+          #存放位置；注意您的系统,若不写系统会有一个默认位置。系统会定期清理！最好是配置一个固定的地址
+          #Linux 存放
+          #basedir: /usr/local/config-rope
+          #window存放
+          basedir: C:\config-repo
+          timeout: 10
+          force-pull: true
+        bootstrap: true
+  security:
+    user:
+      name: configuser
+      password: configpasd
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9001/eureka
+  instance:
+    appname: config-server
+    prefer-ip-address: true
+logging:
+  path: ./log.
