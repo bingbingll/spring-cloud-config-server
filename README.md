@@ -1,4 +1,4 @@
 # spring-cloud-config-server
 基于spring-cloud-config2.0.3构建的服务配置中心 
-</br>如果你没有使用eureka 默认的8761端口时会有一个问题请看Wiki。
-</br>如果你是用自定义端口号时汇报 com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused: connect   java.lang.IllegalStateException: No instances found of configserver (CONFIGSERVER) 该错误已找到解决方式 请看Wiki。
+</br>eureka的端口默认是8761建议使用默认否者会有坑。
+</br>如果你很倔强就要使用自定义端口时汇报可以很明确的告诉你共享你先遇到了我，这个坑虽说没填上，但给你找到了出坑的路，异常如下： com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused: connect   java.lang.IllegalStateException: No instances found of configserver (CONFIGSERVER) 该错误已找到解决方式 请看Wiki。
